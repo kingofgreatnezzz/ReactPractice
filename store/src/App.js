@@ -1,18 +1,16 @@
-import "./App.css";
-import CakeContainer from "./component/CakeContainer";
-import { Provider } from "react-redux";
-import store from "./redux/store";
-import HooksCakeContainer from "./component/HooksCakeContainer";
-import IcecreamContainer from "./component/IcecreamContainer";
+import React from 'react';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
+  const notify = () => {
+    toast("Wow so easy!");
+  };
+
   return (
-      <Provider store={store}>
-        <CakeContainer />
-        <HooksCakeContainer/>
-        <IcecreamContainer/>
-      </Provider>
-  
+    <div>
+      <button onClick={notify}>Notify!</button>
+    </div>
   );
 }
 
